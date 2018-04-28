@@ -1,17 +1,27 @@
 {
   "name": "ember-metrics-amplify",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "ember-metrics adapter for Amplify Analytics (Pinpoint).",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-metrics",
+    "amplify",
+    "pinpoint",
+    "analytics"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "grimbonious@hey.computer",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grimbonious/ember-metrics-amplify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grimbonious/ember-metrics-amplify/issues"
+  },
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
@@ -23,6 +33,7 @@
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
+    "aws-amplify": "0.2.0",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.1.2",
@@ -35,17 +46,24 @@
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
+    "ember-cli-webpack-imports": "0.0.2",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-metrics": "^0.12.1",
     "ember-resolver": "^4.0.0",
+    "ember-sinon": "^2.1.0",
     "ember-source": "~3.1.0",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3"
+  },
+  "peerDependencies": {
+    "aws-amplify": "^0.3.3",
+    "ember-metrics": "^0.12.2"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

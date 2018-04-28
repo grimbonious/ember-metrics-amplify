@@ -1,7 +1,7 @@
 ember-metrics-amplify
 ==============================================================================
 
-[Short description of the addon.]
+[ember-metrics](https://www.npmjs.com/package/ember-metrics) adapter for [Amplify Analytics (Pinpoint)](https://aws.github.io/aws-amplify/media/analytics_guide)
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,12 +10,23 @@ Installation
 ember install ember-metrics-amplify
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
+```js
+// config/environment.js
+let ENV = {
+  metricsAdapters: [
+    {
+      name: 'Amplify',
+      environments: ['development', 'production'],
+      config: {
+        pageEventName: 'PageView'
+      }
+    }
+  ]
+};
+̀̀̀
 
 Contributing
 ------------------------------------------------------------------------------
